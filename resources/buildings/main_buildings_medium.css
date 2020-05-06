@@ -55,6 +55,10 @@ body{
 .o-options p:hover{
     background-color: rgb(6, 36, 49);
 }
+.o-options a{
+    text-decoration: none;
+    color: #fff;
+}
 /* Header end */
 
 /* Building Cards start */

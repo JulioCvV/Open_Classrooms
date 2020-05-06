@@ -66,11 +66,15 @@ body {
   top: 5rem;
   right: 0rem;
   text-align: center;
+  z-index: 5;
 }
 .o-options p:hover{
   background-color: rgb(6, 36, 49);
 }
-
+.o-options a, a:visited{
+  text-decoration: none;
+  color: #ffffff;
+}
 /* Header Section end */
 
 /* Container calendar start */
@@ -538,6 +542,13 @@ table td {
   position: absolute;
   top: 500px;
   left: 616px;
+  width: 14.8%;
+  height: 162px;
+}
+.o-c4 {
+  position: absolute;
+  top: 800px;
+  left: 220px;
   width: 14.8%;
   height: 162px;
 }
