@@ -1,0 +1,73 @@
+/* To delete header border */
+body{
+    margin: 0;
+    padding: 0;
+}
+/* Header start */
+.o-header{
+    background-color: #093C51;
+}
+.o-sub-header{
+    display: flex;
+    flex-direction: column;
+}
+.o-title,.o-indicationtitle{
+    font-family: 'Montserrat',sans-serif;
+}
+#appName, .o-user{
+    font-weight: 400;
+    color: #fff;
+}
+#appName{
+    font-size: 1.75rem;
+    padding: 0.1rem;
+    text-align: center;
+}
+.o-user{
+    font-size: 1.125rem;
+}
+.o-user_icon{
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+}
+.o-user,.o-free-classrooms{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+}
+.o-user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Header end */
+
+/* Building Cards start */
+.o-indicationtitle{
+    text-align: center;
+}
+.o-search-classroom-link,.o-search-classroom-link:visited{
+    text-decoration: none;
+    color: #000;
+}
+.o-buildings-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.o-building{
+    width: 16rem;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 0.75rem;
+    margin: 1rem 1rem 1rem 0;
+}
+.o-img-card{
+    width: 16rem;
+    height: 9rem;
+    border-radius: 0.74rem 0.74rem 0 0;
+}
+.o-info-card{
+    padding: 0 1rem 1rem 1rem;
+}
+/* Building Cards end */
