@@ -56,7 +56,7 @@ body{
 .o-options p:hover{
     background-color: rgb(6, 36, 49);
 }
-.o-options a, a:visited{
+.o-sesionEnd, .o-sesionEnd:visited{
     text-decoration: none;
     color: #fff;
 }
@@ -99,7 +99,7 @@ li:hover{
     margin: 0.5rem 0;
 }
 
-.o-btn-back,.o-btn-link {
+.o-btn-back,.o-btn-link, .o-btn-link:visited {
     display: flex;
     font-family: 'Roboto',sans-serif;
     text-decoration: none;
