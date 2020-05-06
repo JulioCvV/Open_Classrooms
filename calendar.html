@@ -60,11 +60,53 @@
                     <h2>Horario: salon 1101</h2>
                 </div>
                 <div class="o-reserveBtn">
-                    <h3>Reservar</h3>
+                    <button class="o-reserve-Btn" onclick="openReserveCard()">Reservar</button>
                 </div>
             </div>         
         </div>
         <!-- Container header calendar end -->
+
+        <!-- Reserve card section start -->
+        <div id="reserveCard" class="o-reserveCard">
+            <div class="o-reserveInfo">
+                <h4>Estudiante</h4>
+                <p>Juan David Moreno</p>
+            </div>
+            <div class="o-reserveInfo">
+                <h4>Fecha</h4>
+                <select class="o-reserveCardDate">
+                    <option value="26 de Febrero de 2020">26 de Febrero de 2020</option>
+                    <option value="27 de Febrero de 2020">27 de Febrero de 2020</option>
+                    <option value="28 de Febrero de 2020">28 de Febrero de 2020</option>
+                </select>
+            </div>
+            <div class="o-reserveInfo">
+                <h4>Salón</h4>
+                <p>1101</p>
+            </div>
+            <div class="o-reserveInfo">
+                <div class="o-hour">
+                    <h4>Hora de inicio</h4>
+                    <select class="o-reserveCardHour">
+                        <option value="08:30 a.m">08:30 a.m</option>
+                        <option value="09:00 a.m">09:00 a.m</option>
+                        <option value="09:30 a.m">09:30 a.m</option>
+                    </select>
+                </div>
+                <div class="o-hour">
+                    <h4>Hora de fin</h4>
+                    <select class="o-reserveCardHour">
+                        <option value="10:30 a.m">10:30 a.m</option>
+                        <option value="11:00 a.m">11:00 a.m</option>
+                        <option value="11:30 a.m">11:30 a.m</option>
+                    </select>
+                </div>
+            </div>
+            <div class="o-reservebtns">
+                <button class="o-btnCardCancel" onclick="cancelReserveCard()">Cancelar</button>
+                <button class="o-btnCardReserve">Reservar</button>
+            </div>
+        </div>
 
         <!-- Calendar body start -->        
         <div class="o-calendar-body">     
@@ -226,7 +268,7 @@
         
     </div>
     <!-- Container calendar end -->
-
+    <script src="/resources/calendar/reserve.js"></script>
 </body>
 
 </html>
