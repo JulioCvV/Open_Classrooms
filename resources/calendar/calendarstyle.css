@@ -74,7 +74,6 @@ body {
 /* Header Section end */
 
 /* Container calendar start */
-
 .o-container-calendar {
   display: flex;
   flex-wrap: wrap;
@@ -162,7 +161,7 @@ body {
   margin: 0 0.5rem;
   border-radius: 0.1875rem;
 }
-.o-text-date h3,.o-reserveBtn h3{
+.o-text-date h3{
   margin: 0;
 }
 .o-title-calendar h2{
@@ -170,12 +169,16 @@ body {
   color: #ffffff;
   margin: 0;
 }
-.o-reserveBtn{
+.o-reserve-Btn{
   color: #ffffff;
+  background-color: #ff8b1c;
+  border: 1px solid #ff8b1c;
+  font-size: 1rem;
+  font-weight: bold;
   padding: 0.5rem;
   cursor: pointer;
 }
-.o-reserveBtn:hover{
+.o-reserve-Btn:hover{
   background-color: #f87f0e;
 }
 
@@ -285,6 +288,68 @@ body {
 .o-reserveBtn:hover{
   background-color: #f87f0e;
 } */
+
+/* Reserve card section start */
+.o-reserveCard{
+  display:none;
+  max-width:26rem;
+  padding: 1.5rem 1.5rem 1.5rem 0;
+  font-family: 'Roboto',sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  position: absolute;
+  top:120px;
+  z-index: 10;
+}
+.o-reserveInfo, .o-hour{
+  display: flex;
+  align-items: center;
+}
+.o-reserveInfo{
+  margin: 0 0 1rem 0;
+}
+.o-reserveInfo h4{
+  margin: 0 0.5rem 0 1.5rem;
+}
+.o-reserveInfo p{
+  margin:0;
+}
+.o-reserveCardDate, .o-reserveCardHour{
+  cursor: pointer;
+}
+.o-reservebtns{
+  padding: 1.5rem 0 0 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.o-btnCardCancel{
+  background-color: #ffffff;
+  border: 1px solid #ff8b1c;
+  color: #ff8b1c;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0 0 0.5rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+.o-btnCardCancel:hover{
+  background-color: #ff8b1c;
+  color: #ffffff;
+}
+.o-btnCardReserve{
+  background-color: #ff8b1c;
+  color: #ffffff;
+  border: 1px solid #ff8b1c;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0 0 0.5rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+.o-btnCardReserve:hover{
+  background-color: #f87f0e;
+}
 
 /* Container calendar body start */
 
