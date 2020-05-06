@@ -1,0 +1,922 @@
+:root {
+  --whiteColor: #ffffff;
+  --orangeColor: #ff8b1c;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Section start */
+
+.o-header {
+  background-color: #093c51;
+}
+.o-buildings-container,
+.o-sub-header {
+  max-width: 1096px;
+  margin: auto;
+}
+.o-sub-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.o-title {
+  font-family: "Montserrat", sans-serif;
+}
+#appName,
+.o-user {
+  font-weight: 400;
+  color: var(--whiteColor);
+}
+
+#appName h1 {
+  text-align: left;
+}
+.o-user_icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+}
+.o-user,
+.o-free-classrooms {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.o-user {
+  display: flex;
+  align-items: center;
+}
+
+/* Header Section end */
+
+/* Container calendar start */
+
+.o-container-calendar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .o-btn-back {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  top: 70px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.o-btn-back a {
+  position: relative;
+  top: 18px;
+  left: -3px;
+}
+.o-btn-back h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+} */
+/* Button back section start */
+.o-btn-back{
+  position: absolute;
+  top:70px;
+  left: 20px;
+}
+
+.o-btn-back a{
+  display: flex;
+  position: relative;
+  top:18px;
+  left:-3px;
+  font-family: 'Roboto',sans-serif;
+  text-decoration: none;
+  color: #000;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+.o-btn-text{
+  margin: 0;
+}
+.o-btn-back a:hover{
+  background-color: rgb(245, 245, 245);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+/* Calendar header section start */
+.o-header-calendar{
+  width: 1096px;
+  background-color:#ff8b1c;
+  font-family: 'Roboto',sans-serif;
+  padding: 0.5rem;
+}
+.o-select-date{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.o-date{
+  display: flex;
+  align-items: center;
+}
+.o-arrow-left{
+  transform: rotate(-180deg);
+}
+.o-arrow-left,.o-arrow-right{
+  background-color: #ffffff;
+  border-radius: 0.1875rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.o-text-date{
+  background-color: #ffffff;
+  padding: 0.3rem 3rem;
+  margin: 0 0.5rem;
+  border-radius: 0.1875rem;
+}
+.o-text-date h3,.o-reserveBtn h3{
+  margin: 0;
+}
+.o-title-calendar h2{
+  font-family: 'Montserrat',sans-serif;
+  color: #ffffff;
+  margin: 0;
+}
+.o-reserveBtn{
+  color: #ffffff;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.o-reserveBtn:hover{
+  background-color: #f87f0e;
+}
+
+/* 
+.o-header-calendar {
+  width: 100%;
+  height: 42px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.o-select-date {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 40px;
+  background: var(--orangeColor);
+}
+
+.o-date {
+  position: absolute;
+  left: 4%;
+  width: 20.625rem;
+  height: 2.5rem;
+  bottom: 2px;
+}
+
+.o-arrow-left {
+  position: absolute;
+  top: 0.3rem;
+  left: 20px;
+  transform: rotate(-180deg);
+  width: 30px;
+  height: 30px;
+  background: var(--whiteColor);
+  border-radius: 3px;
+}
+
+.o-arrow-left img {
+  position: absolute;
+  bottom: 7px;
+  left: 9px;
+}
+
+.o-arrow-right {
+  position: absolute;
+  right: 15px;
+  top: 0.3rem;
+  width: 30px;
+  height: 30px;
+  background: var(--whiteColor);
+  border-radius: 3px;
+}
+
+.o-arrow-right img {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+}
+
+.o-text-date {
+  position: relative;
+  bottom: 8px;
+  right: 30px;
+  width: 200px;
+  height: 30px;
+  margin: 0.5rem 6rem;
+  font-size: 0.6rem;
+  background: var(--whiteColor);
+  border-radius: 3px;
+}
+
+.o-text-date h1 {
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  line-height: 30px;
+}
+
+.o-title-calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  color: var(--whiteColor);
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.o-title-calendar h2 {
+  margin: 10px 0 0 50px;
+  text-align: center;
+}
+.o-reserveBtn{
+  position: absolute;
+  top:0px;
+  left: 61.7rem;
+  font-family: 'Roboto';
+  font-weight: 400;
+  color:#ffffff;
+  cursor: pointer;
+}
+.o-reserveBtn h3{
+  margin: 0.5rem;
+}
+.o-reserveBtn:hover{
+  background-color: #f87f0e;
+} */
+
+/* Container calendar body start */
+
+.o-calendar-body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(240, 240, 240, 0.41);
+  background-color: rgba(240, 240, 240, 0.41);
+  margin: 0 10%;
+}
+/* Container calendar day start */
+
+.o-calendar-day {
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  width: 73.8%;
+  height: 5rem;
+  left: 13.625rem;
+}
+.o-day {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  height: 60px;
+  align-items: center;
+}
+
+.o-day h2 {
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+
+.o-active h2 {
+  color: var(--whiteColor);
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--orangeColor);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.o-day p {
+  padding: 10px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #000000;
+}
+
+.o-active p {
+  color: var(--orangeColor);
+}
+
+/* Container calendar day end */
+
+/* Container calendar time start */
+
+.o-time {
+  width: 90px;
+  height: auto;
+  text-align: center;
+}
+
+.o-clock {
+  display: flex;
+  position: relative;
+  left: 20px;
+  top: 10px;
+  margin: 0 0 -5px 0;
+}
+
+.o-clock img {
+  width: 40px;
+}
+
+.o-clock-number {
+  padding: 26px 20px;
+}
+
+.o-clock-number h3 {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+/* Container calendar time end */
+
+/* Container calendar table start */
+
+.o-calendar-table {
+  width: 100%;
+}
+
+table {
+  margin-top: 5rem;
+  width: 100%;
+  height: 80%;
+  border-collapse: collapse;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+
+table td {
+  border: 1px solid rgba(10, 11, 60, 0.22);
+}
+
+/* Container calendar table end */
+
+/* Container calendar cards start */
+
+.o-card-class {
+  position: absolute;
+  top: 202px;
+  left: 220px;
+  width: 14.8%;
+  height: 160px;
+  background-color: var(--whiteColor);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.o-bar {
+  width: 98%;
+}
+
+.o-green {
+  border: 2px solid #6ff58d;
+}
+
+.o-yellow {
+  border: 2px solid #ffcf4b;
+}
+.o-red {
+  border: 2px solid #fa3a3a;
+}
+
+.o-class-name {
+  position: relative;
+  top: 0.5rem;
+  left: 0.25rem;
+}
+
+.o-class-name h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.o-class-teacher {
+  position: relative;
+  top: 0.65rem;
+  left: 0.25rem;
+}
+
+.o-class-teacher h2 {
+  font-family: "Roboto", sans-serif;
+  color: #929292;
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+
+.o-class-time {
+  position: absolute;
+  bottom: 0;
+  left: 0.25rem;
+}
+
+.o-class-time h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: #929292;
+}
+
+.o-c2 {
+  position: absolute;
+  top: 350px;
+  left: 418px;
+  width: 14.8%;
+  height: 114px;
+}
+
+.o-c3 {
+  position: absolute;
+  top: 500px;
+  left: 616px;
+  width: 14.8%;
+  height: 162px;
+}
+/* Container calendar cards end */
+
+/* Container calendar body end */
+
+/* Container calendar info start */
+
+.o-container-info {
+  width: 60%;
+  height: 10px;
+  position: relative;
+  top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: #000000;
+  font-size: 0.9rem;
+  background: rgba(230, 229, 229, 0.2);
+  border-radius: 3px;
+}
+
+.o-info {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+}
+
+.o-info p {
+  position: relative;
+  bottom: 15px;
+}
+.o-info-bar {
+  position: relative;
+  top: 6px;
+  left: -5px;
+  width: 100px;
+  height: 5px;
+}
+
+.o-color-green {
+  background-color: #6ff58d;
+}
+
+.o-color-yellow {
+  background-color: #ffcf4b;
+}
+
+.o-color-red {
+  background-color: #fa3a3a;
+}
+/* Container calendar info start */
+
+/* Container calendar end */
+
+@media screen and (max-width: 600px) {
+  .o-header {
+    background-color: #093c51;
+  }
+  .o-sub-header {
+    display: flex;
+    flex-direction: column;
+  }
+  .o-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+  }
+  #appName,
+  .o-user {
+    font-weight: 400;
+    color: #fff;
+  }
+  #appName {
+    font-size: 1.125rem;
+    padding: 0.1rem;
+    text-align: center;
+  }
+  .o-user {
+    font-size: 18px;
+  }
+  .o-user_icon {
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+  }
+  .o-user,
+  .o-free-classrooms {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+  }
+  .o-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* HEADER */
+
+  /* Container btn back start */
+  .o-btn-back {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    top: 152px;
+    left: 5px;
+    cursor: pointer;
+  }
+
+  .o-btn-back a {
+    position: relative;
+    top: 12px;
+    left: -3px;
+  }
+
+  .o-btn-back img {
+    width: 14px;
+  }
+
+  .o-btn-back h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  /* Container btn back start */
+
+  /* Container header calendar start */
+
+  .o-header-calendar {
+    width: 100%;
+    height: 42px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .o-select-date {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 42px;
+    background: var(--orangeColor);
+  }
+
+  .o-date {
+    position: absolute;
+    left: 4%;
+    width: 20.625rem;
+    height: 2.5rem;
+    bottom: 0.125rem;
+  }
+
+  .o-arrow-left {
+    margin: 0.4rem 1rem;
+    transform: rotate(-180deg);
+    width: 20px;
+    height: 20px;
+    background: var(--whiteColor);
+    border-radius: 3px;
+  }
+
+  .o-arrow-left img {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+  }
+
+  .o-arrow-right {
+    margin: 0.4rem 6.5rem;
+    width: 20px;
+    height: 20px;
+    background: var(--whiteColor);
+    border-radius: 3px;
+  }
+
+  .o-arrow-right img {
+    position: absolute;
+    bottom: 2px;
+    right: 1px;
+  }
+
+  .o-text-date {
+    width: 116px;
+    height: 20px;
+    margin: 1.2rem 6rem;
+    font-size: 0.6rem;
+    background: var(--whiteColor);
+    border-radius: 3px;
+    line-height: 1;
+  }
+
+  .o-text-date h1 {
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    line-height: 23px;
+    font-size: 1rem;
+  }
+
+  .o-title-calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: var(--whiteColor);
+    font-weight: normal;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+  }
+
+  .o-title-calendar h2 {
+    margin: 15px 0 0 240px;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  /* Container header calendar end */
+
+  /* Container Calendar Body start */
+
+  .o-calendar-body {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(240, 240, 240, 0.41);
+    background-color: rgba(240, 240, 240, 0.41);
+  }
+
+  /* Container calendar time start */
+
+  .o-time {
+    width: 80px;
+    margin: 2.4rem 0;
+  }
+
+  .o-clock-number h3 {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+  }
+
+  .o-clock {
+    display: none;
+  }
+
+  /* Container calendar time end */
+
+  /* Container calendar day start */
+
+  .o-calendar-day {
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    top: 175px;
+    width: 81%;
+    height: 5rem;
+    left: 68px;
+  }
+
+  .o-day {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+  }
+
+  .o-day h2 {
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    border-radius: 100%;
+    margin-right: 1px;
+    font-size: 10px;
+    padding: 0 4px;
+  }
+
+  .o-active h2 {
+    color: var(--whiteColor);
+    padding: 5px;
+    border-radius: 50%;
+    background-color: var(--orangeColor);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 13px;
+  }
+
+  .o-day p {
+    position: relative;
+    margin-left: -2px;
+    padding: 10px 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 10px;
+  }
+  .o-active p {
+    padding: 0 3px;
+    color: var(--orangeColor);
+  }
+
+  /* Container calendar day end */
+
+  /* Container calendar table start */
+
+  .o-calendar-table {
+    width: 100%;
+  }
+
+  table {
+    margin-top: 5rem;
+    width: 100%;
+    height: 80%;
+    border-collapse: collapse;
+    background-color: rgba(204, 204, 204, 0.2);
+  }
+  table td {
+    padding: 0px 20px;
+  }
+  /* Container calendar table end */
+
+  /* Container calendar cards start */
+
+  .o-card-class {
+    position: absolute;
+    top: 237px;
+    left: 68px;
+    width: 16%;
+    height: 112px;
+    background-color: var(--whiteColor);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .o-bar {
+    width: 94%;
+  }
+
+  .o-class-name {
+    position: relative;
+    top: 0.5rem;
+    left: 0.25rem;
+  }
+
+  .o-class-name h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+  }
+
+  .o-class-teacher {
+    position: relative;
+    top: 0.65rem;
+    left: 0.25rem;
+  }
+
+  .o-class-teacher h2 {
+    font-family: "Roboto", sans-serif;
+    color: #929292;
+    font-size: 0.5rem;
+    font-weight: normal;
+  }
+
+  .o-class-time {
+    position: absolute;
+    bottom: 0;
+    left: 0.25rem;
+  }
+
+  .o-class-time h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.5rem;
+    font-weight: normal;
+    color: #929292;
+  }
+
+  .o-c2 {
+    position: absolute;
+    top: 395px;
+    left: 129px;
+    width: 16%;
+    height: 114px;
+  }
+
+  .o-c3 {
+    position: absolute;
+    top: 565px;
+    left: 190px;
+    width: 16%;
+    height: 170px;
+  }
+  /* Container calendar cards end */
+
+  /* Container Calendar Body end */
+
+  /* Container calendar info start */
+
+  .o-container-info {
+    width: 79%;
+    height: 10px;
+    position: relative;
+    top: -750px;
+    left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: #000000;
+    font-size: 0.9rem;
+    background: rgba(230, 229, 229, 0.2);
+    border-radius: 3px;
+  }
+
+  .o-info {
+    width: 30%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: space-around;
+  }
+
+  .o-info p {
+    position: relative;
+    bottom: 15px;
+    left: 30px;
+    font-size: 8px;
+  }
+  .o-info-bar {
+    position: relative;
+    top: 6px;
+    left: -9px;
+    width: 36px;
+    height: 2px;
+  }
+
+  /* Container calendar info end */
+}
+
+@media only screen and (min-width: 1350px) {
+  .o-card-class {
+    position: absolute;
+    top: 202px;
+    left: 280px;
+    width: 15%;
+    height: 160px;
+    background-color: var(--whiteColor);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .o-c2 {
+    position: absolute;
+    top: 350px;
+    left: 568px;
+    width: 15%;
+    height: 114px;
+  }
+  .o-c3 {
+    position: absolute;
+    top: 500px;
+    left: 856px;
+    width: 15%;
+    height: 162px;
+  }
+}
