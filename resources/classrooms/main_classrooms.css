@@ -1,0 +1,128 @@
+/* To delete header border */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Header start */
+.o-header{
+    background-color: #093C51;
+}
+.o-classrooms-container,.o-sub-header{
+    max-width: 1096px;
+    margin: auto;
+}
+.o-sub-header{
+    display: flex;
+    justify-content: space-between;
+}
+.o-title,.o-indicationtitle{
+    font-family: 'Montserrat',sans-serif;
+}
+#appName, .o-user{
+    font-weight: 400;
+    color: #fff;
+}
+.o-user_icon{
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem;
+}
+.o-user,.o-free-classrooms{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+}
+.o-user{
+    display: flex;
+    align-items: center;
+}
+/* Header end */
+
+.o-submainSection{
+    margin: 2rem 0;
+}
+.o-left{
+    margin: 0 5rem 0 0;
+}
+/* Navigation bar start */
+.o-nav-menu{
+    width: 12rem;
+    margin: 2rem 0;
+    border: 1px solid rgb(206, 210, 216) ;
+}
+ul{
+    list-style-type: none;
+}
+.o-menuList{
+    margin: 0;
+    padding: 0;
+}
+li{  
+    padding: 0.5rem 2rem; 
+    font-family: 'Roboto',sans-serif;
+    font-weight: bold;
+    color:#9CA7BC;
+    text-align: center;
+}
+li:hover{
+    color: #fff;
+    background-color: #FF8B1C;
+    cursor: pointer;
+}
+/* Navigation bar end */
+
+.o-btn-back{
+    margin: 0.5rem 0;
+}
+
+.o-btn-back,.o-btn-link {
+    display: flex;
+    font-family: 'Roboto',sans-serif;
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+}
+.o-btn-text{
+    margin: 0;
+}
+.o-btn-link:hover{
+    background-color: rgb(245, 245, 245);
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+/* Classroom Cards start */
+.o-submainSection{
+    display: flex;
+    align-items: flex-start;
+}
+.o-classroom-calendar-link,.o-classroom-calendar-link:visited{
+    text-decoration: none;
+    color: #000;
+}
+.o-card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.o-classroom{
+    width: 16rem;
+    text-align: center;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 0.75rem;
+    margin: 1rem 1rem 1rem 0;
+    cursor: pointer;    
+    transition: 0.3s;
+}
+.o-classroom:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+.o-img-card{
+    width: 16rem;
+    height: 9rem;
+    border-radius: 0.7rem 0.7rem 0 0;
+}
+.o-info-card{
+    padding: 1rem;
+}
+/* Classroom Cards end */
