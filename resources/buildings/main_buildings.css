@@ -25,7 +25,7 @@ body{
 .o-user_icon{
     width: 3rem;
     height: 3rem;
-    margin: 1rem;
+    margin: 0 0 0 1rem;
 }
 .o-user,.o-free-classrooms{
     font-family: 'Roboto',sans-serif;
@@ -34,6 +34,26 @@ body{
 .o-user{
     display: flex;
     align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+.o-user:hover{
+    background-color: rgb(6, 36, 49);
+}
+.o-user:hover .o-options{
+    display: block;
+}
+.o-options{
+    width: 14.5rem;
+    display: none;
+    position: absolute;
+    background-color: #093C51;
+    top: 5rem;
+    right: 8.5rem;
+    text-align: center;
+}
+.o-options p:hover{
+    background-color: rgb(6, 36, 49);
 }
 /* Header end */
 
