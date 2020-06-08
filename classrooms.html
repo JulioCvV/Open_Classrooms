@@ -12,20 +12,19 @@
     <link rel="stylesheet" type="text/css" media="screen and (min-width:1001px)" href="resources/classrooms/main_classrooms.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:601px) and (max-width: 1000px)" href="resources/classrooms/main_classrooms_medium.css">
     <link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="resources/classrooms/main_classrooms_small.css">
-    <script src="main.js"></script>
+    <script src="/resources/classrooms/classrooms_per_floor.js"></script>
 </head>
-<body>
+<body onload="showFirstFloorClassrooms()">
     <!-- Header section start -->
     <div id="header" class="o-header">
         <div class="o-sub-header">
             <div id="headerTitle" class="o-title">
-                <h1 id="appName">OPEN <b>CLASSROOMS</b></h1>
+                <h1 id="appName"><a href="buildings.html">OPEN <b>CLASSROOMS</b></a></h1>
             </div>
             <div id="user" class="o-user">
-                <p>Juan David Moreno</p>
+                <p id="userUAO">Juan David Moreno</p>
                 <img src="resources/user_icon.png" class="o-user_icon">
                 <div class="o-options">
-                    <p>Ver mis reservas</p>
                     <a class="o-sesionEnd" href="/login.html">
                         <p>Cerrar sesión</p>
                     </a>
@@ -48,10 +47,10 @@
                 <!-- Navigation bar section start -->
                 <div id="menu" class="o-nav-menu">
                     <ul id="menuList" class="o-menuList">
-                        <li id="floor1">Piso 1</li>
-                        <li id="floor2">Piso 2</li>
-                        <li id="floor3">Piso 3</li>
-                        <li id="floor4">Piso 4</li>
+                        <li id="floor1" onclick="showFirstFloorClassrooms()">Piso 1</li>
+                        <li id="floor2" onclick="showSecondFloorClassrooms()">Piso 2</li>
+                        <li id="floor3" onclick="showThirdFloorClassrooms()">Piso 3</li>
+                        <li id="floor4" onclick="showFourthFloorClassrooms()">Piso 4</li>
                     </ul>
                 </div>
                 <!-- Navigation bar section end -->
@@ -62,7 +61,7 @@
                     <h2>Seleccione un salón de clase</h2>
                 </div>
                 <div id="containerClassroomsCard" class="o-card-container">
-                    <div id="Classroom1" class="o-classroom">
+                    <!-- <div id="Classroom1" class="o-classroom">
                         <a class="o-classroom-calendar-link" href="calendar.html">
                         <img class="o-img-card" src="resources/classrooms/classroom_crop.jpg" alt="Salón 1101">
                         <div class="o-info-card">
@@ -100,11 +99,22 @@
                             <h3 class="o-title">1106</h3>
                         </div>
                     </div>
-                    </div>
+                    </div> -->
                 </div>
         <!-- Classrooms cards section end -->
         </div>
     </div>
+    </div>
     <!-- Main section end -->
+    <div class="o-footer">
+            <div class="o-appNameLogo">
+                    <h1 id="appNameInvert">OPEN <b>CLASSROOMS</b></h1>
+            </div>
+            <div class="o-footerInfo">
+                <h4>Desarrollado por Jhosua Pachón y Julio Vallejo</h4>
+                <p>2020-01. Proyecto para la asignatura Desarrollo de Experiencias Multimedia para la Web</p>
+            </div>
+    </div>
+    <script src="/resources/classrooms/classrooms_per_floor.js"></script>
 </body>
 </html>

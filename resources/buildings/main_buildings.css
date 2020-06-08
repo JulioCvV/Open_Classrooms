@@ -22,12 +22,15 @@ body{
     font-weight: 400;
     color: #fff;
 }
+#appName a{
+    text-decoration: none;
+  }
 .o-user_icon{
     width: 3rem;
     height: 3rem;
     margin: 0 0 0 1rem;
 }
-.o-user,.o-free-classrooms{
+.o-user,.o-free-classrooms,.o-existingReserve{
     font-family: 'Roboto',sans-serif;
     font-weight: 400;
 }
@@ -49,13 +52,17 @@ body{
     position: absolute;
     background-color: #093C51;
     top: 5rem;
-    right: 8.5rem;
+    right: 8rem;
     text-align: center;
+}
+.o-options p{
+    padding: 0.8rem 0;
+    margin: 0.5rem 0;
 }
 .o-options p:hover{
     background-color: rgb(6, 36, 49);
 }
-.o-options a, a:visited{
+.o-options a,.o-btn-edit a, a:visited{
     text-decoration: none;
     color: #fff;
 }
@@ -68,6 +75,7 @@ body{
 .o-search-classroom-link,.o-search-classroom-link:visited{
     text-decoration: none;
     color: #000;
+    cursor: pointer; 
 }
 .o-card-container{
     display: flex;
@@ -78,8 +86,7 @@ body{
     text-align: center;
     border: 1px solid rgb(216, 216, 216);
     border-radius: 0.75rem;
-    margin: 1rem 1rem 1rem 0;
-    cursor: pointer;    
+    margin: 1rem 1rem 1rem 0;   
     transition: 0.3s;
 }
 .o-building:hover{
@@ -94,4 +101,65 @@ body{
 .o-info-card{
     padding: 1rem;
 }
+.o-free-classrooms{
+    margin: 1rem 0 0 0;
+}
+.o-existingReserve{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 1rem 1rem 1rem 0;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(216, 216, 216);
+    /* border-top: 1px solid #9CA7BC; */
+}
+.o-existingReserve:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+.o-existingReserve h4{
+    margin: 1rem 0 0 0;
+}
+.o-existingReserve p{
+    margin: 0.5rem 0 0 0;
+}
+.o-btn-edit{
+    width: 10rem;
+    color: #ffffff;
+    background-color: #ff8b1c;
+    border: 1px solid #ff8b1c;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin: 1rem 0 0 0;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    align-self: flex-start;
+}
+.o-btn-edit:hover{
+    background-color: #f87f0e;
+}
+.o-btn-edit h4{
+    margin: 0;
+}
 /* Building Cards end */
+/* Copyright Footer start*/
+.o-footer{
+    margin: 2rem 0 0 0;
+    padding: 2rem;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+.o-footerInfo{
+    margin: 1rem;
+    padding: 1rem;
+    border-left: 1px solid #000000;
+}
+/* Copyright Footer end*/

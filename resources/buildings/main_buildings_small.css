@@ -23,6 +23,9 @@ body{
     padding: 0.1rem;
     text-align: center;
 }
+#appName a{
+    text-decoration: none;
+  }
 .o-user{
     font-size: 1.125rem;
 }
@@ -31,7 +34,7 @@ body{
     height: 2rem;
     margin: 0 0 0 1rem;
 }
-.o-user,.o-free-classrooms{
+.o-user,.o-free-classrooms,.o-existingReserve{
     font-family: 'Roboto',sans-serif;
     font-weight: 400;
 }
@@ -52,13 +55,13 @@ body{
     position: absolute;
     background-color: #093C51;
     top: 8.2rem;
-    right: 3rem;
+    right: 6.5rem;
     text-align: center;
 }
 .o-options p:hover{
     background-color: rgb(6, 36, 49);
 }
-.o-options a, a:visited{
+.o-options a, a:visited,.o-btn-edit a{
     text-decoration: none;
     color: #fff;
 }
@@ -92,4 +95,53 @@ body{
 .o-info-card{
     padding: 0 1rem 1rem 1rem;
 }
+.o-existingReserve{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 1rem;
+    border-top: 1px solid #9CA7BC;
+}
+.o-existingReserve h4{
+    margin: 1rem 0 0 0;
+}
+.o-existingReserve p{
+    margin: 0.5rem 0 0 0;
+}
+.o-btn-edit{
+    width: 10rem;
+    color: #ffffff;
+    background-color: #ff8b1c;
+    border: 1px solid #ff8b1c;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin: 1rem 0 1rem 0;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    align-self: center;
+}
+.o-btn-edit:hover{
+    background-color: #f87f0e;
+}
+.o-btn-edit h4{
+    margin: 0;
+}
 /* Building Cards end */
+/* Copyright Footer start*/
+.o-footer{
+    margin: 2rem 0 0 0;
+    padding: 2rem;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+.o-footerInfo{
+    margin: 1rem;
+    padding: 1rem;
+    border-left: 1px solid #000000;
+}
+/* Copyright Footer end*/

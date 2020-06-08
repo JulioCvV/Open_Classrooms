@@ -22,6 +22,9 @@ body{
     font-weight: 400;
     color: #fff;
 }
+#appName a{
+    text-decoration: none;
+}
 .o-user_icon{
     width: 3rem;
     height: 3rem;
@@ -121,7 +124,7 @@ li:hover{
     transition: 0.3s;
 }
 .o-classroom:hover{
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 .o-img-card{
     width: 16rem;
@@ -132,3 +135,19 @@ li:hover{
     padding: 1rem;
 }
 /* Classroom Cards end */
+/* Copyright Footer start*/
+.o-footer{
+    margin: 2rem 0 0 0;
+    padding: 2rem;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+.o-footerInfo{
+    margin: 1rem;
+    padding: 1rem;
+    border-left: 1px solid #000000;
+}
+/* Copyright Footer end*/

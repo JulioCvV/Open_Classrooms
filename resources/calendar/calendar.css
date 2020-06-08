@@ -1,0 +1,456 @@
+:root {
+    --bgOrange: #fa881c;
+    --white: #fff;
+    --bgCalendar:#f9f9f9;
+    --colorText:#000;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: #e4e4e4;
+  }
+  /* Header Section start */
+.o-header {
+    background-color: #093c51;
+  }
+  .o-buildings-container,
+  .o-sub-header {
+    max-width: 1096px;
+    margin: auto;
+  }
+  .o-sub-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  .o-title {
+    font-family: "Montserrat", sans-serif;
+    margin: 1.45rem 0;
+  }
+  #appName,
+  .o-user {
+    font-weight: 400;
+    color: var(--white);
+  }
+  
+  #appName h1 {
+    text-align: left;
+  }
+  #appName a{
+    text-decoration: none;
+  }
+  .o-user_icon {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0 0 1rem;
+  }
+  .o-user,
+  .o-free-classrooms {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+  }
+  .o-user{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .o-user:hover{
+    background-color: rgb(6, 36, 49);
+  }
+  .o-user:hover .o-options{
+    display: block;
+  }
+  .o-options{
+    width: 14.5rem;
+    display: none;
+    position: absolute;
+    background-color: #093C51;
+    top: 5rem;
+    right: 0rem;
+    text-align: center;
+    z-index: 5;
+  }
+  .o-options p{
+    padding: 0.8rem 0;
+    margin: 0.5rem 0;
+}
+  .o-options p:hover{
+    background-color: rgb(6, 36, 49);
+  }
+  .o-options a, a:visited{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  /* Header Section end */
+  
+  /* Container calendar start */
+  .o-btn-back{
+    position: absolute;
+    top:80px;
+  }
+  .o-btn-back a{
+    display: flex;
+    position: relative;
+    top:18px;
+    left:-3px;
+    font-family: 'Roboto',sans-serif;
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+  }
+  .o-btn-text{
+    margin: 0;
+  }
+  .o-btn-back a:hover{
+    background-color: rgb(245, 245, 245);
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  .o-calendar {
+    /* max-width: 80rem; */
+    height: 95rem;
+    margin: 4rem auto;
+    max-width: 1280px;
+    padding: 0.5rem 0;
+    background-color: var(--bgCalendar);
+    box-shadow: 0 0 16px 1px #ababab;
+  }  
+  /* Información del calendario */
+  .o-calendar-info {
+    display: flex;
+    position: relative;
+    bottom: 0.5rem;
+    align-items: center;
+    padding: 0.7rem 9.25rem;
+    text-transform: capitalize;
+    background-color: var(--bgOrange);
+  }
+  
+  .o-calendar-back {
+    transform: rotate(180deg);
+    width: 1.5rem;
+    height: 1.6rem;
+    background-color: var(--white);
+    border-radius: 3px;
+    position: relative;
+  }
+  
+  .o-calendar-back img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 1rem;
+  }
+  .o-calendar-date {
+    width: 10rem;
+    padding: 0.2rem 0;
+    margin: 0 0.5rem;
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 3px;
+  }
+  
+  .o-calendar-next {
+    width: 1.5rem;
+    height: 1.6rem;
+    background-color: var(--white);
+    border-radius: 3px;
+    position: relative;
+  }
+  
+  .o-calendar-next img {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 1rem;
+  }
+  .o-calendar-info h3{
+    margin: 0 auto;
+    color: var(--white);
+  }
+  
+  .o-btn-reserved{
+    text-align: center;
+    width: 12%;
+    height: 1.8rem;
+    border: 2px solid var(--white);
+    border-radius: 6px;
+    
+  }
+  
+  .o-btn-reserved button{
+    width: 100%;
+    height: 20%;
+    background: none;
+    line-height: 1.7rem;
+    outline: none;
+    border:none;
+    color: var(--white);
+    cursor: pointer;
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+    transition: ease-out all .2s;
+  }
+  /* Información del calendario */
+  
+  /* Week */
+  
+  
+  .o-calendar-week {
+    display: grid;
+    /* grid-template-columns: repeat(7, 1fr); */
+    color: var(--white);
+    position: relative;
+    left: 4.5rem;
+    top: 1.3rem;
+    width: 5rem;
+  }
+  /* Hora */
+  .o-calendar-time{
+    position: relative;
+    bottom: 0.8rem;
+  }
+  
+   .o-time{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+  .o-hour{
+    margin: 2.35rem 0;
+    color: var(--colorText);
+    font-weight: lighter;
+  }
+  
+  /* Hora */
+  .o-calendar-day{
+    color:var(--colorText) ;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .o-today {
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    width: 20px;
+  }
+  
+  .o-days {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: none;
+    position: relative;
+    bottom: 1.6rem;
+    left: 9.2rem;
+    width: 1096px;
+  }
+  
+  .o-number{
+    margin: 0;
+    color: var(--colorText);
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    width: 180px;
+  }
+  
+  /* Week */
+  
+  
+  /* Tabla */
+  table{
+    max-width: 900px;
+    width: 80%;
+    margin: -0.1rem 9.2rem;  
+    table-layout: fixed;
+  }
+  
+  td{
+    width: 180px;
+    max-width: 400px;
+    overflow: hidden;
+    height: 92px;
+    border: 1px solid rgba(10,11,60,.22);
+    background-color: rgba(240,240,240,.41);
+    cursor: pointer;
+    color: rgba(97, 97, 97, 0.445);
+  }
+  
+  /* Tabla */
+  
+  /* Cards */
+  .o-card-class{
+    position: relative;
+    /* top: 198px;
+    left: 196px; */
+    width: 175px;
+    height: 90px;
+    overflow: hidden;
+    background-color: #fff;
+    white-space: nowrap;
+    box-shadow: 0px 4px 4px rgba(0,0,0,.25) ;
+    color: #000000;
+  }
+  .o-status{
+    border:3px solid #e41d1d;
+  }
+  
+  .o-class-name{
+    line-height: 25px;
+    margin: 0 0.5rem;
+  }
+  
+  .o-card-hour {
+    position: relative;
+    bottom: 0;
+    margin: 0 0.5rem;
+  }
+  .o-card-hour h6{
+    position: relative;
+    top:0px ;
+  }
+  
+  .o-card-reserve{
+    position: absolute;
+    /* top: 198px;
+    left: 196px; */
+    width: 175px;
+    height: 80px;
+    overflow: hidden;
+    background-color: #fff;
+    white-space: nowrap;
+    box-shadow: 0px 4px 4px rgba(0,0,0,.25) ;
+    color: #000000;
+  }
+  .o-status-reserve{
+    border:3px solid #093c51;
+  }
+  .o-class-name-reserve{
+    line-height: 25px;
+    margin: 0 0.5rem;
+  }
+  
+  .o-card-hour-reserve {
+    position: relative;
+    bottom: 0;
+    margin: 0 0.5rem;
+  }
+  .o-card-hour-reserve h6{
+    position: relative;
+    top:0px ;
+  }
+  /* Cards */
+  
+  /* Reserva */
+  
+  .o-reserveCard{
+    display: none;
+    width: 30%;
+    padding: 1.5rem;
+    font-family: 'Roboto',sans-serif;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+    position: relative;
+    bottom: 50rem;
+    margin: auto;
+  }
+  
+  .o-reserve-title{
+    margin: 1rem 0;
+  }
+  .o-reserve-title input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    font-size: 30px;
+  }
+  .o-reserveInfo{
+    display: flex;
+    align-items: center;
+    margin: 0 0.1rem 0.4rem;
+  }
+  
+  .o-reserveInfo p{
+    margin: 0 .3rem;
+  }
+  
+  .o-reserveInfo select, .o-reserveHour select{
+    border: none;
+    outline: none;
+  }
+  
+  .o-reserveCardDate, .o-reserveCardHour{
+    margin: 0 0.3rem;
+    cursor: pointer;
+  }
+  
+  .o-reserveHour{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .o-reserveHour .o-rh{
+    display: flex;
+    margin: 0 0.1rem;
+    
+  }
+  
+  .o-btns{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0 ;
+  }
+  
+  .o-btns button{
+    text-transform: capitalize;
+    width: 35%;
+    height: 32px;
+    margin: 0 0 0 0.6rem;
+    font-family: 'Roboto',sans-serif;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    
+  }
+  
+  .o-btns button:hover{
+    box-shadow: 0 2px 2px rgba(0,0,0,.25);
+  }
+  
+  .o-btns .o-btn-cancel{
+    border: 1px solid var(--bgOrange);
+    color: var(--bgOrange);
+  }
+  
+  .o-btns .o-btn-reserve{
+    background-color: var(--bgOrange);
+    color: var(--white);
+  }
+  /* Copyright Footer start*/
+.o-footer{
+  margin: 2rem 0 0 0;
+  padding: 2rem;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat';
+}
+.o-footerInfo{
+  margin: 1rem;
+  padding: 1rem;
+  border-left: 1px solid #000000;
+}
+/* Copyright Footer end*/

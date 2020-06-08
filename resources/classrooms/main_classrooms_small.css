@@ -23,6 +23,9 @@ body{
     padding: 0.1rem;
     text-align: center;
 }
+#appName a{
+    text-decoration: none;
+  }
 .o-user{
     font-size: 1.125rem;
 }
@@ -130,3 +133,19 @@ li:hover{
     padding: 1rem;
 }
 /* Classroom Cards end */
+/* Copyright Footer start*/
+.o-footer{
+    margin: 2rem 0 0 0;
+    padding: 2rem;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+.o-footerInfo{
+    margin: 1rem;
+    padding: 1rem;
+    border-left: 1px solid #000000;
+}
+/* Copyright Footer end*/

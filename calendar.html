@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400,700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <!-- CSS CALENDAR -->
-    <link rel="stylesheet" href="resources/calendar/calendarstyle.css">
+    <link rel="stylesheet" href="/resources/calendar/calendar.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
     <title>Calendario</title>
 </head>
 
@@ -17,13 +23,12 @@
     <div id="header" class="o-header">
         <div class="o-sub-header">
             <div id="headerTitle" class="o-title">
-                <h1 id="appName">OPEN <b>CLASSROOMS</b></h1>
+                <h1 id="appName" ><a href="buildings.html">OPEN <b>CLASSROOMS</b></a></h1>
             </div>
             <div id="user" class="o-user">
-                <p>Juan David Moreno</p>
+                <p id="userUAO">Juan David Moreno</p>
                 <img src="resources/user_icon.png" class="o-user_icon">
                 <div class="o-options">
-                    <p>Ver mis reservas</p>
                     <a href="/login.html">
                         <p>Cerrar sesión</p>
                     </a>
@@ -32,246 +37,265 @@
         </div>
     </div>
     <!-- Header section end -->
-
-    <!-- Container calendar start -->
-
-    <div class="o-container-calendar">
+    <!-- Container header calendar start -->
+    <div class="o-calendar">
+        <!-- <div class="alert alert-warning" role="alert">
+              This is a warning alert—check it out!
+            </div> -->
         <!-- Button back start -->
         <div class="o-btn-back">
             <a href="classrooms.html"><img src="resources/calendar/arrow-back.svg" alt="">
-            <h3 class="o-btn-text">Volver</h3>
+                <h3 class="o-btn-text">Volver</h3>
             </a>
         </div>
         <!-- Button back end -->
 
-        <!-- Container header calendar start -->
-        <div class="o-header-calendar">
-            <div class="o-select-date">
-                <div class="o-date">
-                    <div class="o-arrow-left">
-                        <img src="resources/calendar/next.svg" alt="flecha izquierda">
-                    </div>
-                    <div class="o-text-date">
-                        <h3>Feb 26-Feb 29</h3>
-                    </div>
-                    <div class="o-arrow-right">
-                        <img src="resources/calendar/next.svg" alt="flecha derecha">
-                    </div>
-                </div>
-                <div class="o-title-calendar">
-                    <h2>Horario: salon 1101</h2>
-                </div>
-                <div class="o-reserveBtn">
-                    <button class="o-reserve-Btn" onclick="openReserveCard()">Reservar</button>
-                </div>
-            </div>         
+        <div class="o-calendar-info">
+            <div class="o-calendar-date" id="date"></div>
+            <h3 id="classroom">Horario salón 1106</h3>
         </div>
-        <!-- Container header calendar end -->
-
-        <!-- Reserve card section start -->
-        <div id="reserveCard" class="o-reserveCard">
-            <div class="o-reserveInfo">
-                <h4>Estudiante</h4>
-                <p>Juan David Moreno</p>
+        <div class="o-calendar-week">
+            <div class="o-calendar-time">
+                <img src="resources/calendar/clock.svg" alt="" />
             </div>
-            <div class="o-reserveInfo">
-                <h4>Fecha</h4>
-                <select class="o-reserveCardDate">
-                    <option value="26 de Febrero de 2020">26 de Febrero de 2020</option>
-                    <option value="27 de Febrero de 2020">27 de Febrero de 2020</option>
-                    <option value="28 de Febrero de 2020">28 de Febrero de 2020</option>
-                </select>
-            </div>
-            <div class="o-reserveInfo">
-                <h4>Salón</h4>
-                <p>1101</p>
-            </div>
-            <div class="o-reserveInfo">
-                <div class="o-hour">
-                    <h4>Hora de inicio</h4>
-                    <select class="o-reserveCardHour">
-                        <option value="08:30 a.m">08:30 a.m</option>
-                        <option value="09:00 a.m">09:00 a.m</option>
-                        <option value="09:30 a.m">09:30 a.m</option>
-                    </select>
-                </div>
-                <div class="o-hour">
-                    <h4>Hora de fin</h4>
-                    <select class="o-reserveCardHour">
-                        <option value="10:30 a.m">10:30 a.m</option>
-                        <option value="11:00 a.m">11:00 a.m</option>
-                        <option value="11:30 a.m">11:30 a.m</option>
-                    </select>
-                </div>
-            </div>
-            <div class="o-reservebtns">
-                <button class="o-btnCardCancel" onclick="cancelReserveCard()">Cancelar</button>
-                <button class="o-btnCardReserve">Reservar</button>
-            </div>
-        </div>
-
-        <!-- Calendar body start -->        
-        <div class="o-calendar-body">     
-            <!-- Container calendar time start -->   
             <div class="o-time">
-                <div class="o-clock">
-                    <img src="resources/calendar/clock.svg" alt="">
-                </div>
-                <div class="o-clock-number">
-                    <h3>7 am</h3>
-                </div>
-                <div class="o-clock-number">
-                    <h3>8 am</h3>
-                </div>
-                <div class="o-clock-number">
-                    <h3>9 am</h3>
-                </div>
-                <div class="o-clock-number">
-                    <h3>10 am</h3>
-                </div>
-                <div class="o-clock-number">
-                    <h3>11 am</h3>
-                </div>
-                <div class="o-clock-number">
-                    <h3>12 pm</h3>
-                </div>
+                <div class="o-hour">7 am</div>
+                <div class="o-hour">8 am</div>
+                <div class="o-hour">9 am</div>
+                <div class="o-hour">10 am</div>
+                <div class="o-hour">11 am</div>
+                <div class="o-hour">12 pm</div>
+                <div class="o-hour">1 pm</div>
+                <div class="o-hour">2 pm</div>
+                <div class="o-hour">3 pm</div>
+                <div class="o-hour">4 pm</div>
+                <div class="o-hour">5 pm</div>
+                <div class="o-hour">6 pm</div>
+                <div class="o-hour">7 pm</div>
+                <div class="o-hour">8 pm</div>
             </div>
-            <!-- Container calendar time end -->   
-
-            <!-- Container calendar day start -->   
-            <div class="o-calendar-day">
-                <div class="o-day o-active">
-                    <h2>26</h2>
-                    <p>Lunes</p>
-                </div>
-                <div class="o-day">
-                    <h2>27</h2>
-                    <p>Martes</p>
-                </div>
-                <div class="o-day">
-                    <h2>28</h2>
-                    <p>Miercoles</p>
-                </div>
-                <div class="o-day">
-                    <h2>29</h2>
-                    <p>Jueves</p>
-                </div>
-                <div class="o-day">
-                    <h2>1</h2>
-                    <p>Viernes</p>
-                </div>
-                
-            </div>
-            <!-- Container calendar day end -->   
-
-            <!-- Container calendar table start -->   
-
-            <div class="o-calendar-table">
-                <table>
-                    <tr>
-                        <td>
-                            <div class="o-card-class">
-                                <div class="o-bar o-green"></div>
-                                <div class="o-class-name">
-                                    <h1>Nombre clase</h1>
-                                </div>
-                                <div class="o-class-teacher">
-                                    <h2>Nombre profesor</h2>
-                                </div>
-                                <div class="o-class-time">
-                                    <h3>7:00 a 8:30 am</h3>
-                                </div>
-                            </div>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <div class="o-card-class o-c2">
-                                <div class="o-bar o-yellow"></div>
-                                <div class="o-class-name">
-                                    <h1>Nombre clase</h1>
-                                </div>
-                                <div class="o-class-teacher">
-                                    <h2>Nombre profesor</h2>
-                                </div>
-                                <div class="o-class-time">
-                                    <h3>8:30 a 9:30 am</h3>
-                                </div>
-                            </div>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <div class="o-card-class o-c3">
-                                <div class="o-bar o-red"></div>
-                                <div class="o-class-name">
-                                    <h1>Nombre clase</h1>
-                                </div>
-                                <div class="o-class-teacher">
-                                    <h2>Nombre profesor</h2>
-                                </div>
-                                <div class="o-class-time">
-                                    <h3>10:00 a 11:30 am</h3>
-                                </div>
-                            </div>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>         
-            <!-- Container calendar table end -->   
-            
-            
+            <!-- <div class="o-calendar-day">Lunes</div>
+            <div class="o-calendar-day">Martes</div>
+            <div class="o-calendar-day">Miércoles</div>
+            <div class="o-calendar-day">Jueves</div>
+            <div class="o-calendar-day">Viernes</div>
+            <div class="o-calendar-day">Sábado</div> -->
         </div>
-        <!-- Calendar body end -->
+        <div class="o-days" id="week"></div>
+        <table id="tbl">
+            <tr>
+                <td id="td1">
+                    <div class="o-card-class">
+                        <div class="o-status"></div>
+                        <div class="o-class-name">
+                            <h4>Cálculo 1</h4>
+                            <h5>Laureano</h5>
+                        </div>
+                        <div class="o-card-hour">
+                            <h6>7:00 a 8:30 a.m.</h6>
+                        </div>
+                    </div>
+                </td>
+                <td id="td2">Clic para reservar
+                </td>
+                <td id="td3">Clic para reservar</td>
+                <td id="td4">Clic para reservar</td>
+                <td id="td5">
+                    <div class="o-card-class">
+                        <div class="o-status"></div>
+                        <div class="o-class-name">
+                            <h4>Cálculo 1</h4>
+                            <h5>Laureano</h5>
+                        </div>
+                        <div class="o-card-hour">
+                            <h6>7:00 a 8:30 a.m.</h6>
+                        </div>
+                    </div>
+                </td>
+                <td id="td6">Clic para reservar</td>
+            </tr>
+            <tr>
+                <td id="td7">Clic para reservar</td>
+                <td id="td8">Clic para reservar</td>
+                <td id="td9">Clic para reservar</td>
+                <td id="td10">Clic para reservar</td>
+                <td id="td11">Clic para reservar</td>
+                <td id="td12">Clic para reservar</td>
+            </tr>
+            <tr>
+                <td id="td13">Clic para reservar</td>
+                <td id="td14">Clic para reservar</td>
+                <td id="td15">Clic para reservar</td>
+                <td id="td16">Clic para reservar</td>
+                <td id="td17">Clic para reservar</td>
+                <td id="td18">Clic para reservar</td>
+            </tr>
+            <tr>
+                <td id="td19">
+                    <div class="o-card-class">
+                        <div class="o-status"></div>
+                        <div class="o-class-name">
+                            <h4>Algoritmia</h4>
+                            <h5>Victor Vargas</h5>
+                        </div>
+                        <div class="o-card-hour">
+                            <h6>10:00 a.m a 11:00 p.m.</h6>
+                        </div>
+                    </div>
+                </td>
+                <td id="td20">Clic para reservar</td>
+                <td id="td21">Clic para reservar</td>
+                <td id="td22">Clic para reservar</td>
+                <td id="td23">Clic para reservar</td>
+                <td id="td24">Clic para reservar</td>
+            </tr>
+            <tr>
+                <td id="td25">Clic para reservar</td>
+                <td id="td26">Clic para reservar</td>
+                <td id="td27">Clic para reservar</td>
+                <td id="td28">Clic para reservar</td>
+                <td id="td29">Clic para reservar</td>
+                <td id="td30">Clic para reservar</td>
+            </tr>
+            <tr>
+                <td id="td31">Clic para reservar</td>
+                <td id="td32">Clic para reservar</td>
+                <td id="td33">Clic para reservar</td>
+                <td id="td34">Clic para reservar</td>
+                <td id="td35">Clic para reservar</td>
+                <td id="td36">Clic para reservar</td>
+            </tr>
+            <tr>
+                <td id="td37">Clic para reservar</td>
+                <td id="td38">Clic para reservar</td>
+                <td id="td39">Clic para reservar</td>
+                <td id="td40">Clic para reservar</td>
+                <td id="td41">Clic para reservar</td>
+                <td id="td42">Clic para reservar</td>
+            </tr>
+            <tr>
+                <td id="td43">Clic para reservar</td>
+                <td id="td44">Clic para reservar</td>
+                <td id="td45">Clic para reservar</td>
+                <td id="td46">Clic para reservar</td>
+                <td id="td47">Clic para reservar</td>
+                <td id="td48">Clic para reservar</td>
+            </tr>
+            <tr>
+                <td id="td49">Clic para reservar</td>
+                <td id="td50">Clic para reservar</td>
+                <td id="td51">Clic para reservar</td>
+                <td id="td52">Clic para reservar</td>
+                <td id="td53">Clic para reservar</td>
+                <td id="td54">Clic para reservar</td>
+            </tr>
+            <tr>
+                <td id="td55">Clic para reservar</td>
+                <td id="td56">Clic para reservar</td>
+                <td id="td57">Clic para reservar</td>
+                <td id="td58">Clic para reservar</td>
+                <td id="td59">Clic para reservar</td>
+                <td id="td60">Clic para reservar</td>
+            </tr>
+            <tr>
+                <td id="td61">Clic para reservar</td>
+                <td id="td62">Clic para reservar</td>
+                <td id="td63">Clic para reservar</td>
+                <td id="td64">Clic para reservar</td>
+                <td id="td65">Clic para reservar</td>
+                <td id="td66">Clic para reservar</td>
+            </tr>
+            <tr>
+                <td id="td67">Clic para reservar</td>
+                <td id="td68">Clic para reservar</td>
+                <td id="td69">Clic para reservar</td>
+                <td id="td70">Clic para reservar</td>
+                <td id="td71">Clic para reservar</td>
+                <td id="td72">Clic para reservar</td>
+            </tr>
+            <tr>
+                <td id="td73">Clic para reservar</td>
+                <td id="td74">Clic para reservar</td>
+                <td id="td75">Clic para reservar</td>
+                <td id="td76">Clic para reservar</td>
+                <td id="td77">Clic para reservar</td>
+                <td id="td78">Clic para reservar</td>
+            </tr>
+        </table>
 
-            <!-- Container calendar info start -->   
-
-        <div class="o-container-info">
-            <div class="o-info">
-                <div class="o-info-bar o-color-green"></div>
-                <p>Disponible</p>
+        <div id="reserveCard" class="o-reserveCard">
+            <div class="o-reserve-title">
+                <input type="text" placeholder="Añade un titulo" id="title" autocomplete="off" required>
             </div>
-            <div class="o-info">
-                <div class="o-info-bar o-color-yellow"></div>
-                <p>Próxima clase</p>
+            <div class="o-reserveInfo">
+                <h4>Estudiante:</h4>
+                <p id="userReserve">Juan David Moreno</p>
             </div>
-            <div class="o-info">
-                <div class="o-info-bar o-color-red"></div>
-                <p>En clase</p>
+            <div class="o-reserveInfo">
+                <h4>Salón:</h4>
+                <p id="reClassroom">1106</p>
+            </div>
+            <div class="o-reserveHour">
+                <div class="o-rh">
+                    <h4>Hora inicio</h4>
+                    <select class="o-reserveCardDate" id="timeStart">
+                        <option value="7">7 a.m</option>
+                        <option value="8">8 a.m</option>
+                        <option value="9">9 a.m</option>
+                        <option value="10">10 a.m</option>
+                        <option value="11">11 a.m</option>
+                        <option value="12">12 p.m</option>
+                        <option value="13">1 p.m</option>
+                        <option value="14">2 p.m</option>
+                        <option value="15">3 p.m</option>
+                        <option value="16">4 p.m</option>
+                        <option value="17">5 p.m</option>
+                        <option value="18">6 p.m</option>
+                        <option value="19">7 p.m</option>
+                    </select>
+                </div>
+                <div class="o-rh">
+                    <h4>Hora fin</h4>
+                    <select class="o-reserveCardDate" id="timeEnd">
+                        <option value="8">8 a.m</option>
+                        <option value="9">9 a.m</option>
+                        <option value="10">10 a.m</option>
+                        <option value="11">11 a.m</option>
+                        <option value="12">12 p.m</option>
+                        <option value="13">1 p.m</option>
+                        <option value="14">2 p.m</option>
+                        <option value="15">3 p.m</option>
+                        <option value="16">4 p.m</option>
+                        <option value="17">5 p.m</option>
+                        <option value="18">6 p.m</option>
+                        <option value="19">7 p.m</option>
+                        <option value="20">8 p.m</option>
+                    </select>
+                </div>
+            </div>
+            <div class="o-btns">
+                <button class="o-btn-cancel" onclick="cancelCard()">Cancelar</button>
+                <button class="o-btn-cancel" id="btnDelete" onclick="eliminarCard()">Eliminar</button>
+                <button class="o-btn-reserve" onclick="completeInformationCard()" id="btnReserve">
+                    <span id="btnSave">Guardar</span>
+                    <span id="btnUpdate">Actualizar</span>
+                </button>
             </div>
         </div>
-            <!-- Container calendar info end -->   
-        
     </div>
-    <!-- Container calendar end -->
-    <script src="/resources/calendar/reserve.js"></script>
+    </div>
+    </div>
+    </div>
+    <div class="o-footer">
+        <div class="o-appNameLogo">
+            <h1 id="appNameInvert">OPEN <b>CLASSROOMS</b></h1>
+        </div>
+        <div class="o-footerInfo">
+            <h4>Desarrollado por Jhosua Pachón y Julio Vallejo</h4>
+            <p>2020-01. Proyecto para la asignatura Desarrollo de Experiencias Multimedia para la Web</p>
+        </div>
+    </div>
+    <script src="/resources/calendar/calendar.js"></script>
 </body>
 
 </html>

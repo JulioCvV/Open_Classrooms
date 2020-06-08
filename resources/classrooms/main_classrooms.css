@@ -23,6 +23,10 @@ body{
     font-weight: 400;
     color: #fff;
 }
+#appName a, a:visited{
+    text-decoration: none;
+    color: #fff;
+}
 .o-user_icon{
     width: 3rem;
     height: 3rem;
@@ -52,6 +56,10 @@ body{
     top: 5rem;
     right: 8rem;
     text-align: center;
+}
+.o-options p{
+    padding: 0.8rem 0;
+    margin: 0.5rem 0;
 }
 .o-options p:hover{
     background-color: rgb(6, 36, 49);
@@ -150,3 +158,19 @@ li:hover{
     padding: 1rem;
 }
 /* Classroom Cards end */
+/* Copyright Footer start*/
+.o-footer{
+    margin: 2rem 0 0 0;
+    padding: 2rem;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+.o-footerInfo{
+    margin: 1rem;
+    padding: 1rem;
+    border-left: 1px solid #000000;
+}
+/* Copyright Footer end*/
